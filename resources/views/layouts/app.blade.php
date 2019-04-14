@@ -7,17 +7,9 @@
         <title>{{ config('app.name', 'Laravel CRUD') }}</title>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    @yield('content')
-                </div>
-                <div class="links">
-                    <a href="{{url('/')}}">Home</a>
-                    <a href="{{url('/about')}}">About</a>
-                    <a href="{{url('/services')}}">Services</a>
-                </div>
-            </div>
+        @include('include.navbar')
+        <div class="container">
+            @yield('content')
         </div>
     </body>
 </html>
